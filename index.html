@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+	   body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td,ins,hr {
+	    margin: 0px;
+		padding: 0px;
+      }
+	  .slide {
+	  	width: 200px;
+	  	height: 100px;
+	  	position: relative;
+	  	background-color: skyblue;
+	  }
+	  .pointer {
+	  	position: absolute;
+	  	right: 0;
+	  	bottom: 0;
+	  	padding-bottom: 10px;
+	  	padding-right: 10px;
+	  	overflow: hidden;
+	  }
+	  .pointer i {
+	  float: left;
+		margin: 0 0 0 5px;
+		width: 10px;
+		height: 10px;
+		cursor: pointer;
+		border-radius: 20px 20px 20px 20px;
+		background-color: #000;
+	  }
+	  .pointer .current {
+	  	background-color: #fff;
+	  }
+	</style>
+</head>
+<body>
+  <div class="slide">
+  	<div class="pointer"><i class="current"></i><i></i><i></i></div>
+  </div>
+</body>
+</html>
+
+
+inline-block在使用时，注意缝隙和对齐的问题出现，属于浏览器默认字体所占用的高度
+1. 在元素上可使用浮动float , 需要注意给父元素清除浮动
+2. 在父元素上使用font-sizing:0;
+3. 在父元素上使用line-height:0;
